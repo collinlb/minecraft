@@ -44,7 +44,8 @@
 		{
 			let date = new Date();
 			let time = date.getTime();
-			splash.style.transform = "scale(bounce(1, 0.1, 1));";
+			splash.style.transform = "scale(bounce(1, 0.1, 1, time));";
+			console.log(bounce(1, 0.1, 1, time));
 			// splash.style.maxWidth = String(bounce(1, 0.0075, 1, time)) + "px";
 		}
 	</script>
