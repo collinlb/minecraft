@@ -34,6 +34,7 @@
 			left: 30px;
 			width: 50%;
 			height: 50%;
+			padding-top: 100%;
 		}
 	</style>
 	<script>
@@ -47,8 +48,7 @@
 		{
 			let date = new Date();
 			let time = date.getTime();
-			splash.style.width = String(bounce(476, 0.0075, 119, time)) + "px";
-			splash.style.height = String(bounce(151, 0.0075, 38, time)) + "px";
+			splash.style.width = String(bounce(476, 0.0075, 100, time)) + "px";
 		}
 	</script>
 </html>
