@@ -9,6 +9,12 @@
 		</div>
 	</body>
 	<style>
+		@keyframes bounce
+		{
+			0% {transform: scale(1);}
+			50% {animation-timing-function: ease-out; transform: scale(0.5);}
+			100% {animation-timing-function: ease-in; transform: scale(1);}
+		}
 		body
 		{
 			background-image: url("images/background.png");
@@ -30,13 +36,9 @@
 			position: relative;
 			top: 30px;
 			left: 30px;
-			animation: bounce infinite;
-		}
-		@keyframes bounce
-		{
-			0% {transform: scale(1);}
-			50% {animation-timing-function: ease-out; transform: scale(0.5);}
-			100% {animation-timing-function: ease-in; transform: scale(1);}
+			animation-name: bounce;
+			animation-duration: 1s;
+			animation-iteration-count: infinite;
 		}
 	</style>
 </html>
