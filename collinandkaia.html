@@ -2,30 +2,30 @@
 <html>
 	<title>
 	</title>
-	<img src="images/title.png" class="title"/> 
-	<a href="images/download.png" download="modpack">
-		<img src="images/download.png" class="download">
-	</a>
 	<style>
-		body
+		.parent
 		{
-			background-image: url(images/green.png);
+			position: relative;
+			top: 0;
+			left: 0;
 		}
 		.title
 		{
-			display: block;
-			margin-left: auto;
-			margin-right: auto;
-			width: 50%;
+			position: relative;
+			top: 0;
+			left: 0;
 		}
-		.download
+		.splash
 		{
-			display: block;
-			margin-left: auto;
-			margin-right: auto;
-			width: 20%;
+			position: relative;
+			top: 30px;
+			left: 30px;
 		}
 	</style>
 	<body>
+		<div class="parent">
+			<img class="title" src="images/title.png">
+			<img class="splash" src="images/splash.png">
+		</div>
 	</body>
 </html>
