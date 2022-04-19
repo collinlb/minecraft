@@ -38,11 +38,15 @@
 	<script>
 		const splash = document.getElementById("splash");
 		let id = setInterval(frame, 5);
+		function sin(a, b, c, d, x)
+		{
+			return a * Math.sin(b * (x + c)) + d;
+		}
 		function frame()
 		{
 			let date = new Date();
 			let time = date.getTime();
-			splash.style.maxWidth = String(250 + (Math.sin(time / 2)) / 10) + "px";
+			splash.style.maxWidth = String(sin(5, 0.1, 0, 15)) + "px";
 		}
 	</script>
 </html>
