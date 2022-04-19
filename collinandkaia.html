@@ -2,6 +2,12 @@
 <html>
 	<title>
 	</title>
+	<body>
+		<div class="parent">
+			<img class="title" src="images/title.png">
+			<img class="splash" src="images/splash.png">
+		</div>
+	</body>
 	<style>
 		body
 		{
@@ -29,10 +35,15 @@
 			max-width: 15%;
 		}
 	</style>
-	<body>
-		<div class="parent">
-			<img class="title" src="images/title.png">
-			<img class="splash" src="images/splash.png">
-		</div>
-	</body>
+	<script>
+		const splash = document.getElementByClassName("splash");
+		const date = new Date();
+		let id = setInterval(frame, 5);
+		function frame()
+		{
+			let milliseconds = date.getMilliseconds;
+			splash.style.maxWidth = String(15 + (Math.sin(milliseconds * 10) * 1000)) + "px";
+			console.log(String(15 + (Math.sin(milliseconds * 10) * 1000)) + "px");
+		}
+	</script>
 </html>
