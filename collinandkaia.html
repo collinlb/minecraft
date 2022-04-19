@@ -31,7 +31,8 @@
 			position: relative;
 			top: 30px;
 			left: 30px;
-			max-width: 50%;
+			transform-origin: center;
+			transform: scale(1);
 		}
 	</style>
 	<script>
@@ -45,6 +46,6 @@
 		{
 			let date = new Date();
 			let time = date.getTime();
-			splash.style.maxWidth = String(bounce(20, 0.0075, 250, time)) + "px";		}
+			// splash.style.maxWidth = String(bounce(20, 0.0075, 250, time)) + "px";		}
 	</script>
 </html>
