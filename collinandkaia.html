@@ -46,7 +46,8 @@
 		{
 			let date = new Date();
 			let time = date.getTime();
-			splash.style.maxWidth = String(sin(5, 0.01, 0, 15)) + "px";
+			splash.style.maxWidth = String(sin(5, 0.01, 0, 15, time)) + "px";
+			console.log(time, sin(5, 0.01, 0, 15, time));
 		}
 	</script>
 </html>
