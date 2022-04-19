@@ -5,7 +5,7 @@
 	<body>
 		<div class="parent">
 			<img class="title" src="images/title.png">
-			<img class="splash" src="images/splash.png">
+			<img id="splash" class="splash" src="images/splash.png">
 		</div>
 	</body>
 	<style>
@@ -36,7 +36,7 @@
 		}
 	</style>
 	<script>
-		const splash = document.getElementsByClassName("splash");
+		const splash = document.getElementById("splash");
 		const date = new Date();
 		let id = setInterval(frame, 5);
 		function frame()
