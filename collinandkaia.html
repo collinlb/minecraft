@@ -40,7 +40,7 @@
 		let id = setInterval(frame, 5);
 		function bounce(a, b, c, x)
 		{
-			return Math.abs(a * Math.sin(b * x)) + c;
+			return -Math.abs(a * Math.sin(b * x)) + c;
 		}
 		function frame()
 		{
