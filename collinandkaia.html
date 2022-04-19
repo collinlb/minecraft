@@ -24,38 +24,18 @@
 			position: relative;
 			top: 0;
 			left: 0;
-			transform-origin: center;
-			transform: scale(0.5);
 		}
 		.splash
 		{
 			position: relative;
 			top: 30px;
 			left: 30px;
-			transform-origin: center;
-			transform: scale(0.25);
+			animation: bounce infinite
 		}
-		@ keyframes animation
+		@keyframes bounce
 		{
-			50% {transform.scale(0.5);}
-			100% {transform.scale(2);}
-		}
-		.splash animation
-		{
-			animation: animation 3s;
+			0% {animation-timing-function: ease-out; transform: scale(0.5);}
+			100% {animation-timing-function: ease-in; transform: scale(1);}
 		}
 	</style>
-	<script>
-		function animate()
-		{
-			const splash = document.getElementById("splash");
-			splash.className = "splash animation";
-		}
-		function update()
-		{
-			animate();
-		}
-		update();
-		setInterval(update, 1000);
-	</script>
 </html>
