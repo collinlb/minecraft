@@ -24,15 +24,14 @@
 			position: relative;
 			top: 0;
 			left: 0;
-			height: 50%;
-			width: 50%;
 		}
 		.splash
 		{
 			position: relative;
 			top: 30px;
 			left: 30px;
-			max-width: 50%
+			width: 50%;
+			height: 50%;
 		}
 	</style>
 	<script>
@@ -46,9 +45,8 @@
 		{
 			let date = new Date();
 			let time = date.getTime();
-			splash.style.transform = "scale(bounce(1, 0.1, 1, time));";
-			console.log(bounce(1, 0.1, 1, time));
-			// splash.style.maxWidth = String(bounce(1, 0.0075, 1, time)) + "px";
+			splash.style.width = String(bounce(1, 0.0075, 1, time)) + "px";
+			splash.style.height = String(bounce(1, 0.0075, 1, time)) + "px";
 		}
 	</script>
 </html>
