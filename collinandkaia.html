@@ -41,7 +41,7 @@
 		let id = setInterval(frame, 5);
 		function frame()
 		{
-			let time = date.getTime;
+			let time = date.getTime();
 			splash.style.maxWidth = String(15 + (Math.sin(time * 10) * 1000)) + "px";
 			console.log(time, (Math.sin(time * 10) * 1000), String(15 + (Math.sin(time * 10) * 1000)) + "px");
 		}
