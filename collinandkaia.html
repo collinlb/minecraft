@@ -40,13 +40,13 @@
 		let id = setInterval(frame, 5);
 		function bounce(a, b, c, d, x)
 		{
-			return Math.abs(a * Math.sin(b * (x + c)) + d);
+			return Math.abs(a * Math.sin(b * (x)));
 		}
 		function frame()
 		{
 			let date = new Date();
 			let time = date.getTime();
-			splash.style.maxWidth = String(bounce(25, 0.01, 0, 500, time)) + "px";
+			splash.style.maxWidth = String(bounce(25, 0.01, time)) + "px";
 		}
 	</script>
 </html>
