@@ -24,7 +24,8 @@
 			position: relative;
 			top: 0;
 			left: 0;
-			max-width: 50%;
+			transform-origin: center;
+			transform: scale(0.5);
 		}
 		.splash
 		{
@@ -34,18 +35,27 @@
 			transform-origin: center;
 			transform: scale(0.25);
 		}
+		@ keyframes animation
+		{
+			50% {transform.scale(0.5);}
+			100% {transform.scale(2);}
+		}
+		.splash animation
+		{
+			animation: animation 3s;
+		}
 	</style>
 	<script>
-		const splash = document.getElementById("splash");
-		let id = setInterval(frame, 5);
-		function bounce(a, b, c, x)
+		function animate()
 		{
-			return -Math.abs(a * Math.sin(b * x)) + c;
+			const splash = document.getElementById("splash");
+			splash.className = "splash animation";
 		}
-		function frame()
+		function update()
 		{
-			let date = new Date();
-			let time = date.getTime();
-			// splash.style.maxWidth = String(bounce(20, 0.0075, 250, time)) + "px";		}
+			animate();
+		}
+		update();
+		setInterval(update, 1000);
 	</script>
 </html>
