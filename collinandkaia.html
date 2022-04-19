@@ -34,6 +34,7 @@
 		}
 	</style>
 	<script>
+		const splash = document.getElementById("splash");
 		let id = setInterval(frame, 5);
 		function bounce(a, b, c, x)
 		{
@@ -43,8 +44,7 @@
 		{
 			let date = new Date();
 			let time = date.getTime();
-			let splash = document.getElementById("splash");
-			splash.transform.style = "scale(bounce(1, 0.1, 1));";
+			splash.style.transform = "scale(bounce(1, 0.1, 1));";
 			// splash.style.maxWidth = String(bounce(1, 0.0075, 1, time)) + "px";
 		}
 	</script>
