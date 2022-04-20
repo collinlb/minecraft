@@ -11,9 +11,8 @@
 	<style>
 		@keyframes bounce
 		{
-			0% {transform: scale(1);}
-			50% {animation-timing-function: ease-out; transform: scale(0.5);}
-			100% {animation-timing-function: linear; transform: scale(1);}
+			from {transform: scale(0.5);}
+			to {transform: scale(0.25);}
 		}
 		body
 		{
@@ -38,6 +37,8 @@
 			left: 30px;
 			animation-name: bounce;
 			animation-duration: 1s;
+			animation-direction: alternate;
+			animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
 			animation-iteration-count: infinite;
 		}
 	</style>
