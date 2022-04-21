@@ -4,8 +4,8 @@
 	<style>
 		@keyframes bounce
 		{
-			from {transform: scale(0.225);}
-			to {transform: scale(0.25);}
+			from {transform: scale(22.55);}
+			to {transform: scale(25%);}
 		}
 		body
 		{
@@ -23,7 +23,11 @@
 		}
 		.splash
 		{
-			max-width: 50%;
+			animation-name: bounce;
+			animation-duration: 0.3s;
+			animation-direction: alternate;
+			animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+			animation-iteration-count: infinite;
 			background-color: Blue;
 		}
 	</style>
