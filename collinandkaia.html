@@ -13,7 +13,13 @@
 		}
 		.container
 		{
-			text-align: center;
+			display: flex;
+			background-color: Red;
+		}
+		.subcontainer
+		{
+			display: flex;
+			background-color: Yellow;
 		}
 		.title
 		{
@@ -25,6 +31,7 @@
 			text-align: center;
 			max-width: 50%;
 			z-index: -1;
+			background-color: Green;
 		}
 		.splash
 		{
@@ -36,13 +43,16 @@
 			animation-direction: alternate;
 			animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
 			animation-iteration-count: infinite;
+			background-color: Blue;
 		}
 	</style>
 	</head>
 	<body>
 		<div class="container">
 			<img class="title" src="images/title.png">
-			<img id="splash" class="splash" src="images/splash.png">
+			<div class="subcontainer">
+				<img id="splash" class="splash" src="images/splash.png">
+			</div>
 		</div>
 	</body>
 </html>
