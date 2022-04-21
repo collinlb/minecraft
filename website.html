@@ -11,6 +11,7 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				position: relative;
 				outline: solid 2px white;	
 			}
 			.splashbox
@@ -18,7 +19,7 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				position: relative;
+				position: absolute;
 				left: 20vw;
 				bottom: 20vh;
 				outline: solid 2px white;	
@@ -38,9 +39,9 @@
 	<body>
 		<div class="titlebox">
 			<img class="title" src="images/title.png">
-		</div>
-		<div class="splashbox">
-			<img class="splash" src="images/splash.png">
+			<div class="splashbox">
+				<img class="splash" src="images/splash.png">
+			</div>
 		</div>
 	</body>
 </html>
